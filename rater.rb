@@ -16,7 +16,15 @@ when "add"
     puts "Sorry that movie already exists!!"
   end
 when "update"
-    puts "Updated!"
+  puts "what movie do you want to update?"
+ title = gets.chomp
+ if movies[title.to_sym].nil?
+     puts "Sorry, you dont have that movie in your list!"
+  else
+  puts "new Rating??"
+  rating = gets.chomp
+  movies[title.to_sym] = rating.to_i
+  end
 when "display"
     puts "Movies!"
 when "delete"
