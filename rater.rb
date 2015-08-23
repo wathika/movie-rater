@@ -10,7 +10,7 @@ when "add"
   title = gets.chomp
   puts "How do you want to rate the movie #{title}?"
   rating = gets.chomp
-  movies[title] = rating
+  movies[title.to_sym] = rating.to_i
 when "update"
     puts "Updated!"
 when "display"
