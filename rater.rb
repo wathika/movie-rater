@@ -6,7 +6,11 @@ choice = gets.chomp
 
 case choice
 when "add"
-    puts "Added!"
+  puts "What is the name of your movie??"
+  title = gets.chomp
+  puts "How do you want to rate the movie #{title}?"
+  rating = gets.chomp
+  movies[title] = rating
 when "update"
     puts "Updated!"
 when "display"
