@@ -29,7 +29,13 @@ when "display"
     movies.each do |movie, rating|
       puts "#{movie}: #{rating}"
 when "delete"
-    puts "Deleted!"
-else
-    puts "Error!"
-end
+  puts "What movie do you want to delete?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "Movie not found!"
+  else
+    movies.delete(title.to_sym)
+    puts "#{title} has been removed."
+  end
+  else
+  puts "Sorry, I didn't understand you."
